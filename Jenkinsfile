@@ -10,9 +10,9 @@ pipeline {
                 Maven and Docker must be configured in the Jenkins Global Configuration
                 The settings.xml must be configured in the Jenkins instance
             */
-              def dockerHome = tool 'Docker'
+              //def dockerHome = tool 'Docker'
               def mvnHome = maven '3.8.6'
-              env.PATH = "${dockerHome}/bin:${mvnHome}/bin:${env.PATH}"
+              //env.PATH = "${dockerHome}/bin:${mvnHome}/bin:${env.PATH}"
               mvnHome = tool 'maven 3.8.6'
             }
           }
