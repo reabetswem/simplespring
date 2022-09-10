@@ -45,7 +45,7 @@ pipeline {
             steps{
                     script{
 
-                      docker.withRegistry('docker.io/reabetswem/rea-repo', 'dockerCred'){
+                      docker.withRegistry('https://docker.io/reabetswem/rea-repo', 'dockerCred'){
                       def customImage = docker.build("rea-repo:${env.BUILD_ID}")
                       customImage.push()
 
