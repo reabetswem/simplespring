@@ -8,5 +8,5 @@ USER spring:spring
 
 COPY target/*.jar app.jar
 
-ENTRYPOINT ["java", "-jar", ""]
+ENTRYPOINT ["java", "-jar", "app.jar"]
 
