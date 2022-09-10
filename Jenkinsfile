@@ -42,15 +42,15 @@ pipeline {
                       customImage.push()
 
                     }
+                    }
 
             }
             }
 
             stage('Deploy Image') {
                         steps{
-                            checkout scm
+                            echo "Deploy stage"
                         }
                     }
         }
     }
-}
