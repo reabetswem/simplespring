@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+            maven "maven-3.8.6"
+        }
     stages {
 
         stage('Initialize'){
@@ -9,11 +12,16 @@ pipeline {
             /*
                 Maven and Docker must be configured in the Jenkins Global Configuration
                 The settings.xml must be configured in the Jenkins instance
-            */
+
               def dockerHome = tool 'Docker'
               def mvnHome = maven 'maven-3.8.6'
-              //env.PATH = "${dockerHome}/bin:${mvnHome}/bin:${env.PATH}"
               mvnHome = tool 'maven-3.8.6'
+              env.PATH = "${mvnHome}/bin:${env.PATH}"
+              */
+              echo "M2_HOME = /opt/maven"
+              echo "PATH = ${M2_HOME}/bin:${PATH}"
+
+
             }
           }
         }
@@ -27,7 +35,7 @@ pipeline {
         stage('Maven Build') {
                     steps{
                             script{
-                                    sh "${mvnHome}/bin/mvn clean install"
+                                    sh "mvn clean install"
 
                             }
                     }
