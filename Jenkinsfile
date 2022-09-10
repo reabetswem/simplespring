@@ -12,7 +12,7 @@ pipeline {
             */
               def dockerHome = tool 'Docker'
               def mvnHome = maven 'maven-3.8.6'
-              env.PATH = "${dockerHome}/bin:${mvnHome}/bin:${env.PATH}"
+              //env.PATH = "${dockerHome}/bin:${mvnHome}/bin:${env.PATH}"
               mvnHome = tool 'maven-3.8.6'
             }
           }
