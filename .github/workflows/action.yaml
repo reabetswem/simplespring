@@ -24,7 +24,6 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Build Docker image
-        uses: actions/checkout@v3
         run: docker build . --file Dockerfile --tag rea-repo:$(date +%s)
 
 
