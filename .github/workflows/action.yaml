@@ -43,6 +43,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: reabetswem/rea-repo:$(date +%s)
+          tags: rea-repo:$(date +%s)
 
 
