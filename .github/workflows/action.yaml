@@ -43,6 +43,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: rea-repo:latest
+          tags: reabetswem/rea-repo:latest
 
 
