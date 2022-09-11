@@ -38,11 +38,11 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-        - name: Build and push
-          uses: docker/build-push-action@v3
-          with:
-            context: .
-            push: true
-            tags: reabetswem/rea-repo:$(date +%s)
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: reabetswem/rea-repo:$(date +%s)
 
 
