@@ -8,8 +8,8 @@ USER spring:spring
 
 COPY target/*.jar app.jar
 
-CMD gunicorn --bind 0.0.0.0:$PORT wsgi
+#CMD gunicorn --bind 0.0.0.0:$PORT wsgi
 
-#ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
